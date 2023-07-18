@@ -1,1 +1,37 @@
-<h1>Welcome</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page with Background Image</title>
+  <link rel="stylesheet" href="assets/stylesindex.css">
+</head>
+<body>
+    <header>
+        
+      <div class = "heading" style="color:darkblue"><h1>VisionTrack</h1> </div>
+      <div class = "content-header" style= "font-size:20px ; color:black; text-indent: 100px;"><%= name %> </div>
+      <div class = "content-header" id = "logout_button">
+        <form action="/logout?_method=DELETE" method="POST">
+          <button class="my-button">Logout</button>
+        </form>
+      </div>
+
+      
+    </header>
+  <div class="background-image">
+    <div class="content">
+      <h2>Dates Present</h2>
+      <ul>
+        <% for (let i = 0; i < datesPresent.length; i++) { %>
+          <li><%= datesPresent[i] %></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+  
